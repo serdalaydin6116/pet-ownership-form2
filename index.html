@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Ownership Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="main"><img src="./images/pet_1.png" alt="our loyal friens" width="50%" style="text-align: center;">
+    <p style="text-align: center; text-decoration: crimson;font-size: 24px;">Sahiplenmek İstediğiniz Evcil Hayvan için formu dikkatlice doldurunuz...!</p>
+    <form action="result.html">
+      <div id="personel_info">
+        <fieldset>
+          <legend>Kişisel Bilgiler</legend>
+          <label for="fname">Adınız (*):</label>
+          <input
+            type="text"
+            name="name"
+            id="fname"
+            placeholder="Resdal"
+            required
+          />
+          <br />
+          <label for="lname">Soyadınız (*) :</label>
+          <input
+            type="text"
+            name="name"
+            id="lname"
+            placeholder="Aden"
+            required
+          />
+          <br />
+          <label for="doğum">Doğum tarihiniz (*) :</label>
+          <input
+            type="date"
+            name="birth_d"
+            id="doğum"
+            placeholder="23.08.1996"
+          />
+          <br />
+          <label for="age">Yaşınız :</label>
+          <input type="number" name="yaş" id="age" min="18" max="68" />
+          <br />
+          <label for="marital status">Medeni haliniz :</label>
+          <input type="radio" name="gender" id="gender_1" value="Erkek" />
+          <label for="gender_1">Erkek</label>
+          <input type="radio" name="gender" id="gender_2" value="Bayan" />
+          <label for="gender_2">Bayan</label>
+          <br />
+          <label for="child">Çocuk Durumunuz :</label>
+          <select name="child" id="child">
+            <option value="">Çocuğum bulunmamaktadır.</option>
+            <option value="">-1- cocuk sahibiyim</option>
+            <option value="">-2- cocuk sahibiyim.</option>
+            <option value="">-3- cocuk sahibiyim.</option>
+            <option value="">-4+- cocuk sahibiyim.</option>
+          </select>
+          <br />
+          <label for="occupation">İş durumunuz:</label>
+          <input type="radio" name="work" id="job_1" value="Çalışıyorum" />
+          <label for="job_1">Çalışıyorum</label>
+          <input type="radio" name="work" id="job_2" value="Çalışıyorum" />
+          <label for="job_2">ÇalışMIyorum</label>
+        </fieldset>
+        <br />
+        <div id="İletişim_bilgileri">
+        <fieldset>
+          <legend>İletişim ve Konut Bilgileri</legend>
+          <label for="adres">Adresiniz:</label>
+          <input
+            type="text"
+            name="adres"
+            id="adres"
+            placeholder="Adresi buraya yazınız..."
+          />
+          <br />
+          <label for="phone_1">Telefon numaranız (İş):</label>
+          <input
+            type="tel"
+            name="tel-home"
+            id="phone_1"
+            required
+            value="+90"
+            maxlength="10"
+          />
+          <br />
+          <label for="phone_2">Telefon numaranız (Cep):</label>
+          <input
+            type="tel"
+            name="tel-mobile"
+            id="phone_2"
+            required
+            value="+90"
+            maxlength="10"
+          />
+          <br />
+          <label for="email">E-mail:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            required
+          />
+          <br />
+          <label for="house">Yaşanılan Ev </label>
+          <select name="home" id="house">
+            <option value="own_city">Sahibiyim</option>
+            <option value="own_county">Kiracısıyım</option>
+            <option value="rent_city">Ebeveynlerimle birlikte yaşıyorum</option>
+            <option value="rent_city_ap">Diğer</option>
+          </select>
+          <br />
+          <label for="house_type">Yaşanılan Ev Tipi </label>
+          <select name="home" id="house_type">
+            <option value="own_city">Şehirde</option>
+            <option value="own_county">Kırsalda</option>
+            <option value="rent_city">Diğer</option>
+          </select>
+          <br />
+          <label for="activity">Ev Yoğunluk Durumu </label>
+          <select name="home" id="activity">
+            <option value="own_city">Aşırı yoğun/Meşgul ve gürültülü</option>
+            <option value="own_county">Meşgul ve gürültülü</option>
+            <option value="rent_city">Kısmen meşgul ve gürültülü</option>
+            <option value="rent_city">Sakin</option>
+          </select>
+          <br />
+          <label for="square">Yaşam alanınız kaç metrekaredir?</label>
+          <input
+            type="range"
+            name="square"
+            id="square"
+            min="90"
+            max="220"
+            step="10"
+            value="120"
+          />
+        </fieldset>
+      </div>
+      <br />
+      <div id="awareness">
+        <fieldset id="Diğer_Hususlar">
+          <legend>Diğer Hususlar</legend>
+          <label for="exp">Daha önceden evcil hayvanınız oldu mu?</label>
+          <input type="radio" name="evet" id="pos" />
+          <label for="pos">Evet</label>
+          <input type="radio" name="hayır" id="neg" />
+          <label for="neg">Hayır</label>
+          <br />
+          <label for="file"
+            >Oldu ise onlarla ilgili resim paylaşırmısınız?</label
+          >
+          <input type="file" name="dosya" id="file" multiple />
+          <br />
+          <label for="reason"
+            >Neden bir evcil hayvan sahiplenmek istiyorsunuz?</label
+          >
+          <textarea
+            name="sebep"
+            id="reason"
+            cols="20"
+            rows="5"
+            placeholder="Düşünce ve sebeplerinizi bizimle paylaşır mısınız..."
+          ></textarea>
+          <br /><br />
+          <label for="choice"
+            >Sahiplenmeyi istediğiniz hayvan türlerini seçiniz.</label
+          >
+          <input type="checkbox" name="animal" id="kedi" value="kedi" checked />
+          <label for="kedi">Kedi</label>
+          <input type="checkbox" name="animal" id="köpek" value="köpek" />
+          <label for="köpek">Köpek</label>
+          <input type="checkbox" name="animal" id="kuş" value="kuş" />
+          <label for="kuş">Kuş</label>
+          <input type="checkbox" name="animal" id="balık" value="balık" />
+          <label for="balık">Balık</label>
+          <br />
+          <br />
+          <label for="arama"
+            >Almak istediğiniz hayvan türü için arama yapınız</label
+          >
+          <input
+            type="search"
+            name="araştırma"
+            id="arama"
+            placeholder="Hayvan türünü giriniz"
+          />
+        </fieldset>
+        <br />
+      </div>
+      <div>
+        <input type="reset" value="Seçimleri kaldır" />
+        <input type="submit" value="submit" />
+      </div>
+    </form>
+  </body>
+</html>
